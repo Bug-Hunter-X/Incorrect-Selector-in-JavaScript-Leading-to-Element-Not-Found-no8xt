@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Solution: More robust error handling
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.style.display = 'none';
+    } else {
+      alert("Element with id 'myDiv' not found. Please check your HTML.");
+    }
+  </script>
+</body>
+</html>
